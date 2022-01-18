@@ -1,13 +1,11 @@
 <h3>Cart</h3>
 
-<a routerLink="/shipping"> Shipping Prices </a>
+<p><a routerLink="/shipping"> Shipping Prices </a></p>
 
 <div class="cart-item" *ngFor="let item of items">
   <span> {{ item.name }}</span>
   <span> {{ item.price | currency }}</span>
 </div>
-
-<p>This is test</p>
 
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
   <div>
